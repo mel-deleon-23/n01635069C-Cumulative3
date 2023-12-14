@@ -1,0 +1,42 @@
+﻿@model n01635069C_Cumulative3.Models.Student
+
+@{
+    ViewBag.Title = "Update";
+}
+
+<div>
+    <nav>
+        <a class="navlink" href="/Student/Show/@Model.studentid">Back</a>
+    </nav>
+
+    <h2>Update Student</h2>
+
+    <form method="POST" action="/Student/Update/@Model.studentid">
+        <div class="s_input">
+            <label for="StudentId">Student ID: </label>
+            <input type="text" id="studentid" name="studentid" value="@Model.studentid"/>
+        </div>
+
+        <div class="s_input">
+            <label for="StudentFName">First Name: </label>
+            <input type="text" id="studentfname" name="studentfname" value="@Model.studentfname"/>
+        </div>
+
+        <div class="s_input">
+            <label for="StudentLName">Last Name: </label>
+            <input type="text" id="studentlname" name="studentlname" value="@Model.studentlname"/>
+        </div>
+
+        <div class="s_input">
+            <label for="StudentNumber">Student #: </label>
+            <input type="text" id="studentnumber" name="studentnumber" value="@Model.studentnumber"/>
+        </div>
+
+        <div class="s_input">
+            <input type="submit" value="Update Student" />
+        </div>
+
+    </form>
+
+</div>
+

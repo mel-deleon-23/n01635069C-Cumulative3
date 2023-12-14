@@ -1,0 +1,25 @@
+﻿@model IEnumerable<n01635069C_Cumulative3.Models.Teacher>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<div>
+    <h2>List of Teachers</h2>
+
+    <a class="navlink" href="/Teacher/New">Add a New Teacher</a>
+
+    <form action="/Teacher/List" method="GET">
+        <div>
+            <input type="text" name="TeacherSearchKey" autocomplete="off" />
+            <input type="submit" value="Search" />
+        </div>
+    </form>
+
+    @foreach (n01635069C_Cumulative3.Models.Teacher Teacher in Model)
+    {
+        <div>
+            <a href="/Teacher/Show/@Teacher.teacherid">@Teacher.teacherfname @Teacher.teacherlname</a>
+        </div>
+    }
+</div>
